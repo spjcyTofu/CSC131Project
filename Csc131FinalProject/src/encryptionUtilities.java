@@ -8,7 +8,7 @@ public class encryptionUtilities {
         return rotateBy(26 - rotValue, input);
     }
 
-    static String rotateBy(int rotValue, String input ){
+    static private String rotateBy(int rotValue, String input ){
         String output = "";
 
         for (int loop = 0; loop < input.length(); loop++){
