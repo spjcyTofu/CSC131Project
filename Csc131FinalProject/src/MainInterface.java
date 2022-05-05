@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 
 class MainInterface {
     public static void main(String args[]) {
@@ -46,16 +48,48 @@ class MainInterface {
         enbutton = new JButton("ENCRYPT");
         enbutton.setBounds(150, 225, 190, 50);
         enbutton.setFont(new Font("SansSerif", Font.BOLD, 16));
+        //Move below function to own class at some point
+        enbutton.addActionListener(e ->
+        {
+            System.out.println(txt1.getText());
+            String temp = txt1.getText();
+            int rotValue = (rotpick.getSelectedIndex() + 1); // Please do not observe this
+            temp = encryptionUtilities.encrypt(rotValue, temp);
+            txt2.setText(temp);
+        });
 
         decbutton = new JButton("DECRYPT");
         decbutton.setBounds(360, 225, 190, 50);
         decbutton.setFont(new Font("SansSerif", Font.BOLD, 16));
+        //Move below function to own class at some point
+        decbutton.addActionListener(e ->
+        {
+            System.out.println(txt2.getText());
+            String temp = txt2.getText();
+            int rotValue = (rotpick.getSelectedIndex() + 1); // Please do not observe this
+            temp = encryptionUtilities.decrypt(rotValue, temp);
+            txt1.setText(temp);
+        });
 
         copybutton1 = new JButton("\uD83D\uDCCB");
         copybutton1.setBounds(585, 100, 50, 50);
+        //Move below function to own class at some point
+        copybutton1.addActionListener(e ->
+        {
+            StringSelection stringSelection = new StringSelection (txt1.getText());
+            Clipboard clpbrd = Toolkit.getDefaultToolkit ().getSystemClipboard ();
+            clpbrd.setContents (stringSelection, null);
+        });
 
         copybutton2 = new JButton("\uD83D\uDCCB");
         copybutton2.setBounds(585, 400, 50, 50);
+        //Move below function to own class at some point
+        copybutton2.addActionListener(e ->
+        {
+            StringSelection stringSelection = new StringSelection (txt2.getText());
+            Clipboard clpbrd = Toolkit.getDefaultToolkit ().getSystemClipboard ();
+            clpbrd.setContents (stringSelection, null);
+        });
 
         // Add everything to panel & "activate"
         menu.add(txt1);
@@ -69,5 +103,9 @@ class MainInterface {
         menu.add(copybutton2);
 
         menu.setVisible(true);
+
+        
+
+        
     }
 }
