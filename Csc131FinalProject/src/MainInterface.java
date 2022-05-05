@@ -10,7 +10,7 @@ class MainInterface {
         JFrame menu = new JFrame("CRYPTOR");
         menu.setSize(700, 550);
         menu.setLayout(null);
-        Color menucolor = new Color(165, 183, 170);
+        Color menucolor = new Color(135, 183, 170);
         menu.getContentPane().setBackground(menucolor);
 
         // User-input boxes
@@ -51,11 +51,8 @@ class MainInterface {
         //Move below function to own class at some point
         enbutton.addActionListener(e ->
         {
-            System.out.println(txt1.getText());
-            String temp = txt1.getText();
             int rotValue = (rotpick.getSelectedIndex() + 1); // Please do not observe this
-            temp = encryptionUtilities.encrypt(rotValue, temp);
-            txt2.setText(temp);
+            txt2.setText(encryptionUtilities.encrypt(rotValue, txt1.getText() ) );
         });
 
         decbutton = new JButton("DECRYPT");
@@ -64,11 +61,8 @@ class MainInterface {
         //Move below function to own class at some point
         decbutton.addActionListener(e ->
         {
-            System.out.println(txt2.getText());
-            String temp = txt2.getText();
             int rotValue = (rotpick.getSelectedIndex() + 1); // Please do not observe this
-            temp = encryptionUtilities.decrypt(rotValue, temp);
-            txt1.setText(temp);
+            txt1.setText(encryptionUtilities.decrypt(rotValue, txt2.getText() ) );
         });
 
         copybutton1 = new JButton("\uD83D\uDCCB");
