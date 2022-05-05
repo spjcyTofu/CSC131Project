@@ -97,7 +97,7 @@ class MainInterface {
         menu.add(copybutton2);
 
         menu.setVisible(true);
-
+        menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
 
         
