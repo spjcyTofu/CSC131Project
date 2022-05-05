@@ -8,7 +8,7 @@ class MainInterface {
         JFrame menu = new JFrame("CRYPTOR");
         menu.setSize(700, 550);
         menu.setLayout(null);
-        Color menucolor = new Color(135, 173, 146);
+        Color menucolor = new Color(165, 183, 170);
         menu.getContentPane().setBackground(menucolor);
 
         // User-input boxes
