@@ -6,6 +6,7 @@ import java.awt.datatransfer.StringSelection;
 class MainInterface {
     public static void main(String args[]) {
 
+        //TODO: Implement Singleton design pattern to prevent the creation of duplicate CRYPTOR windows
         // Create Window and menu background
         JFrame menu = new JFrame("CRYPTOR");
         menu.setSize(700, 550);
