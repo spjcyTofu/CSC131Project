@@ -37,7 +37,7 @@ class MainInterface {
         title = new JLabel("CRYPTOR", JLabel.CENTER);
         title.setBounds(250, 30, 200, 50);
         title.setFont(new Font("SansSerif", Font.BOLD, 36));
-        Color titlecolor = new Color(214, 59, 39);
+        Color titlecolor = new Color(132, 32, 1);
         title.setForeground(titlecolor);
 
         rotval = new JLabel("ROTATION VAL");
