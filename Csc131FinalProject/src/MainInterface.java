@@ -2,7 +2,9 @@ import java.awt.*;
 
 class MainInterface {
     public static void main(String args[]) {
-        // CRYPTOR windows
+        
+        // COMPOSITE DESIGN PATTERN
+        
         // Create Window
         Window window;
         window = CryptorWindow.getInstance();

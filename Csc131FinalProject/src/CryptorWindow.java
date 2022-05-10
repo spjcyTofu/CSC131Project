@@ -3,22 +3,17 @@ import javax.swing.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 
-
-/**
- * A window containing a PIN entry pad.
- */
 public class CryptorWindow extends JFrame {
    
     private static CryptorWindow instance = new CryptorWindow();
     
-    /**
-     * Default Constructor.
-     */
+    // Constructor
     private CryptorWindow() {
         super();
         setupLayout();
     }
 
+    //SINGLETON DESIGN PATTERN
     public static CryptorWindow getInstance() {
         return instance;
     }

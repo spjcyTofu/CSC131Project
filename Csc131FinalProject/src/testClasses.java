@@ -1,10 +1,5 @@
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.StringSelection;
 
 public class testClasses {
 
