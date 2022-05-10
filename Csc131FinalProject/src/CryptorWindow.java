@@ -8,12 +8,19 @@ import java.awt.datatransfer.StringSelection;
  * A window containing a PIN entry pad.
  */
 public class CryptorWindow extends JFrame {
+   
+    private static CryptorWindow instance = new CryptorWindow();
+    
     /**
      * Default Constructor.
      */
-    public CryptorWindow() {
+    private CryptorWindow() {
         super();
         setupLayout();
+    }
+
+    public static CryptorWindow getInstance() {
+        return instance;
     }
 
     private void setupLayout() {
