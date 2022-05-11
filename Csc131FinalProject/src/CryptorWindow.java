@@ -18,6 +18,7 @@ public class CryptorWindow extends JFrame {
         return instance;
     }
 
+    // COMPOSITE DESIGN PATTERN
     private void setupLayout() {
         
         // Create menu background
