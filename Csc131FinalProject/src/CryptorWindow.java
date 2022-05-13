@@ -22,7 +22,7 @@ public class CryptorWindow extends JFrame {
     private void setupLayout() {
         
         // Create menu background
-        setTitle("CYRPTOR");
+        setTitle("CRYPTOR");
         setSize(700, 550);
         setLayout(null);
         Color menucolor = new Color(165, 183, 170);
